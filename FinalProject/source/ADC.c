@@ -3,6 +3,7 @@
  *      I acknowledge all content contained herein is my own original work.
  */
 #include "../header/ADC.h"
+#define divADC 6
 void ADC_init()
 {
     ADCSRA |= (0 << ADPS2) | (1 << ADPS1) | (1 << ADPS0); 
@@ -20,5 +21,10 @@ void ADC_SetPin(unsigned char pin)
         ADMUX &= 0xF8; // clear bottom 3 bits
         ADMUX |= pin; // then set bottom 3 bits to channel n
     }
+}
+
+uint16_t ADC_Read()
+{
+    return (ADC >> divADC);
 }
 
