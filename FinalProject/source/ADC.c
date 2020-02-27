@@ -1,8 +1,6 @@
-/*	Author: Vincent Trejo
- *	Exercise Description: [optional - include for your own benefit]
- *      ADC header
- *	I acknowledge all content contained herein, excluding template or example
- *	code, is my own original work.
+/*      Author: Vincent Trejo
+ *      Description: CS120B Final Project - main.c
+ *      I acknowledge all content contained herein is my own original work.
  */
 #include "../header/ADC.h"
 void ADC_init()
