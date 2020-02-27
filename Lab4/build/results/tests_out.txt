@@ -1,0 +1,33 @@
+Breakpoint 1 at 0x210: file source/main.c, line 30.
+Note: automatically using hardware breakpoints for read-only addresses.
+
+Breakpoint 1, main () at source/main.c:30
+30	        countSystem();
+======================================================
+Running all tests..."
+
+"PINA: 0x01, 0x00, 0x02 => PORTB: 1, state: pressA1"...$1 = wait
+"Increment
+"...
+Breakpoint 1, main () at source/main.c:30
+30	        countSystem();
+$2 = wait
+$3 = 8 '\b'
+"decrement
+"...
+Breakpoint 1, main () at source/main.c:30
+30	        countSystem();
+$4 = wait
+$5 = 7 '\a'
+"Reset
+"...$6 = 7 '\a'
+
+Breakpoint 1, main () at source/main.c:30
+30	        countSystem();
+
+Breakpoint 1, main () at source/main.c:30
+30	        countSystem();
+$7 = reset
+$8 = 0 '\000'
+======================================================
+Remote doesn't know how to detach
