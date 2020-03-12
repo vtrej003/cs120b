@@ -1,7 +1,7 @@
-/*	Author: root
- *  Partner(s) Name: henlo johnson
- *	Lab Section:
- *	Assignment: Lab #  Exercise #
+/*	Author: Vincent Trejo
+ *  Partner(s) Name:
+ *	Lab Section:21
+ *	Assignment: Lab #2  Exercise #2
  *	Exercise Description: [optional - include for your own benefit]
  *
  *	I acknowledge all content contained herein, excluding template or example

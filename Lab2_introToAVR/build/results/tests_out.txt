@@ -1,0 +1,60 @@
+Breakpoint 1 at 0xee: file source/main.c, line 26.
+Note: automatically using hardware breakpoints for read-only addresses.
+
+Breakpoint 1, main () at source/main.c:26
+26	        PORTC = 0x04;
+PORTA addr0x800022:	0xff
+PORTB addr0x800025:	0x00
+PORTC addr0x800028:	0x00
+PORTD addr0x80002b:	0x00
+======================================================
+Running all tests..."
+
+"PINA: 0x00 => PORTC: 0x00
+"...
+Breakpoint 1, main () at source/main.c:26
+26	        PORTC = 0x04;
+PORTA addr0x800022:	0xff
+PORTB addr0x800025:	0x00
+PORTC addr0x800028:	0x04
+PORTD addr0x80002b:	0x00
+"PINA: 0x01 => PORTC: 0x01
+"...
+Breakpoint 1, main () at source/main.c:26
+26	        PORTC = 0x04;
+PORTA addr0x800022:	0xff
+PORTB addr0x800025:	0x00
+PORTC addr0x800028:	0x03
+PORTD addr0x80002b:	0x00
+"PINA: 0x02 => PORTC: 0x01
+"...
+Breakpoint 1, main () at source/main.c:26
+26	        PORTC = 0x04;
+PORTA addr0x800022:	0xff
+PORTB addr0x800025:	0x00
+PORTC addr0x800028:	0x03
+PORTD addr0x80002b:	0x00
+"PINA: 0x03 => PORTC: 0x02
+"...
+Breakpoint 1, main () at source/main.c:26
+26	        PORTC = 0x04;
+PORTA addr0x800022:	0xff
+PORTB addr0x800025:	0x00
+PORTC addr0x800028:	0x02
+PORTD addr0x80002b:	0x00
+"PINA: 0x04 => PORTC: 0x01"...
+Breakpoint 1, main () at source/main.c:26
+26	        PORTC = 0x04;
+PORTA addr0x800022:	0xff
+PORTB addr0x800025:	0x00
+PORTC addr0x800028:	0x03
+PORTD addr0x80002b:	0x00
+"PINA: 0x0F => PORTC: 0x00"...
+Breakpoint 1, main () at source/main.c:26
+26	        PORTC = 0x04;
+PORTA addr0x800022:	0xff
+PORTB addr0x800025:	0x00
+PORTC addr0x800028:	0x80
+PORTD addr0x80002b:	0x00
+======================================================
+Remote doesn't know how to detach

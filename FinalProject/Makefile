@@ -43,7 +43,8 @@ PROGRAMMER=stk500v1
 PORT=/dev/ttyACM0
 BAUD=19200
 MEMORY=flash
-#mem:op:file where op is (w)rite, (r)ead, (v)erify; performed in the order specified
+#mem:op:file where op is (w)rite, (r)ead, (v)erify; performed in the order specifiedUSART_Send('l')
+
 VERBOSITY=#-v -v ... etc. to have more verbose output. Normal output is usually enough unless something goes wrong. 
 HIGH=hfuse
 HDEFAULT=0x99

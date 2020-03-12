@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/.Rider2019.3/system/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/.Rider2019.3/system/resharper-host/local/Transient/ReSharperHost/v193/SolutionCaches/_UnityFinal.919718266.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Ardity" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="SampleUserPolling_JustRead.cs" t="Include" />
+            <e p="SampleUserPolling_ReadWrite.cs" t="Include" />
+            <e p="SerialController.cs" t="Include" />
+            <e p="SerialControllerCustomDelimiter.cs" t="Include" />
+            <e p="Threads" t="Include">
+              <e p="AbstractSerialThread.cs" t="Include" />
+              <e p="SerialThread.cs" t="Include" />
+              <e p="SerialThreadCustomDelimiter.cs" t="Include" />
+              <e p="SerialThreadLines.cs" t="Include" />
+            </e>
+          </e>
+          <e p="blue.shader" t="Include" />
+        </e>
+        <e p="User Scripts" t="Include">
+          <e p="Player_controller.cs" t="Include" />
+          <e p="Usart_director.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Temp/bin" t="ExcludeRecursive" />
+      <e p="UnityFinal.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
