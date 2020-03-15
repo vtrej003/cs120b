@@ -55,7 +55,6 @@ public class SerialController : MonoBehaviour
     protected Thread thread;
     protected SerialThreadLines serialThread;
 
-    
 
     // ------------------------------------------------------------------------
     // Invoked whenever the SerialController gameobject is activated.
@@ -115,7 +114,6 @@ public class SerialController : MonoBehaviour
 
         // Read the next message from the queue
         string message = (string)serialThread.ReadMessage();
-       
         if (message == null)
             return;
 
@@ -135,7 +133,6 @@ public class SerialController : MonoBehaviour
     public string ReadSerialMessage()
     {
         // Read the next message from the queue
-
         return (string)serialThread.ReadMessage();
     }
 

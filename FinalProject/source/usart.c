@@ -24,6 +24,13 @@ void USART_Flush()
         static unsigned char dummy;
         while ( UCSR0A & (1 << RXC0) ) { dummy = UDR0; }
 }
+
+void USART_Send(unsigned char sendMe)
+{
+    while( !(UCSR0A & (1 << UDRE0)) );
+        UDR0 = sendMe;
+
+}
 void USART_SendChar(unsigned char sendMe)
 {
         while( !(UCSR0A & (1 << UDRE0)) );

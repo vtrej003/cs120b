@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/FInalAlpha.unity
+- path: Assets/FinalScene.unity
   isLoaded: 1
   isActive: 1

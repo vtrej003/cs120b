@@ -8,48 +8,51 @@
 #define right 0x10
 #define left 0x08
 
-#define strLeft "left"
-#define strRight "right"
-#define strUp "up"
-#define strDown "down"
-
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <util/delay.h>
 #include "../header/ADC.h"
 #include "../header/usart.h"
 
+void sendChar(unsigned char);
 uint16_t joyX;
 uint16_t joyY;
-volatile unsigned char count;
-unsigned char LEDx, LEDy;
+//unsigned char count;
+unsigned char LEDx, LEDy, flashLight;
 int main (void)
 {
     DDRA = 0x00; PORTA = 0xFF;//input 
-    DDRB = 0xFF; PORTB = 0x00;//out
-    DDRD = 0xFF; PORTD = 0xFF;
-    DDRC = 0xFF; PORTC = 0xFF;
+    DDRB = 0x00; PORTB = 0xFF;//out
+    DDRD = 0xFF; PORTD = 0x00;
+    flashLight = 0;
     initUSART();
     ADC_init();
     joyX = 0;
     joyY = 0;
     LEDx = 0x00;
     LEDy = 0x00;
-    count = 0x00;  
+  //  count = 0;
     while(1)
     {
-	//USART_Flush();
-        //USART_Send(count);
         ADC_SetPin(0);
         _delay_ms(100);
         joyX = ADC_Read();//record
-            
+        flashLight = (~PINB & 0x01);
+	if(flashLight > 0)
+	{
+	    sendChar('f');
+	    sendChar(flashLight);
+	    
+	    flashLight = !flashLight;
+	    
+	}
         /*Horizontel LED*/
         if(joyX <= 400)
         {
             LEDx = left;
-	   // USART_SendStr("left");
-            USART_SendChar('l');
+	    sendChar('l');
+            //USART_Send('l');
+	    //USART_Send('\n');
 
         }
         else if((joyX > 400) && (joyX < 600))
@@ -59,8 +62,8 @@ int main (void)
         else if(joyX >= 600)
         {
             LEDx =  right;
-	   // USART_SendStr("right");
-	    USART_SendChar('r');
+	    sendChar('r');
+
         }
         else
         {
@@ -77,8 +80,7 @@ int main (void)
         if(joyY <= 400)
         {
             LEDy = up;
-            //USART_SendStr("up");
-            USART_SendChar('l');
+	    sendChar('u');
 
         }
         else if((joyY > 400) && (joyY < 600))
@@ -88,8 +90,7 @@ int main (void)
         else if(joyY >= 600)
         {
             LEDy =  down;
-            //USART_SendStr("down");
-            USART_SendChar('d');
+	    sendChar('d');
 
         }
         else
@@ -102,7 +103,15 @@ int main (void)
         PORTB = LEDx | LEDy;
         LEDx = 0x00;
         LEDy = 0x00;
-        count++;
+       // count++;
+//	if(count > 10)
+//	    count = 0;
     }    
 }
 
+void sendChar(unsigned char c)
+{
+     USART_Send(c);
+     USART_Send('\n');
+
+}

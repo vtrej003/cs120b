@@ -14,7 +14,6 @@ unsigned char USART_IsSendReady();
 unsigned char USART_HasTransmitted();
 unsigned char USART_HasReceived();
 void USART_Flush();
-void USART_SendChar(unsigned char sendMe);
+void USART_Send(unsigned char sendMe);
 unsigned char USART_Receive();
-void USART_SendStr(char *s);
 #endif //USART_H

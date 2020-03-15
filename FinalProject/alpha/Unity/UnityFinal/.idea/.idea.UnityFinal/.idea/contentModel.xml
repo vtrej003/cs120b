@@ -8,8 +8,13 @@
       <e p="Assets" t="Include">
         <e p="Ardity" t="Include">
           <e p="Scripts" t="Include">
-            <e p="SampleUserPolling_JustRead.cs" t="Include" />
-            <e p="SampleUserPolling_ReadWrite.cs" t="Include" />
+            <e p="Samples" t="Include">
+              <e p="SampleCustomDelimiter.cs" t="Include" />
+              <e p="SampleMessageListener.cs" t="Include" />
+              <e p="SampleTearDown.cs" t="Include" />
+              <e p="SampleUserPolling_JustRead.cs" t="Include" />
+              <e p="SampleUserPolling_ReadWrite.cs" t="Include" />
+            </e>
             <e p="SerialController.cs" t="Include" />
             <e p="SerialControllerCustomDelimiter.cs" t="Include" />
             <e p="Threads" t="Include">
@@ -19,11 +24,11 @@
               <e p="SerialThreadLines.cs" t="Include" />
             </e>
           </e>
-          <e p="blue.shader" t="Include" />
         </e>
         <e p="User Scripts" t="Include">
+          <e p="CameraController.cs" t="Include" />
           <e p="Player_controller.cs" t="Include" />
-          <e p="Usart_director.cs" t="Include" />
+          <e p="UsartDirector.cs" t="Include" />
         </e>
       </e>
       <e p="Temp/bin" t="ExcludeRecursive" />
